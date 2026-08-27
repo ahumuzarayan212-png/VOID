@@ -120,6 +120,19 @@ function renderCart(){
  if(!cart.length){el.innerHTML='<p class="note">Your cart is empty. Choose a category above.</p>';return}
  el.innerHTML=cart.map(x=>`<div class="cart-row"><span>${x.name}</span><b>UGX ${x.price.toLocaleString()}</b></div>`).join('');
 }
+</script><script>
+function go(page) {
+    document.querySelectorAll('.page').forEach(function(section) {
+        section.classList.remove('active');
+    });
+
+    const target = document.getElementById(page);
+
+    if (target) {
+        target.classList.add('active');
+        window.scrollTo(0, 0);
+    }
+}
 </script>
 </body>
   </html>
